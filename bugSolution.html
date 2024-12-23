@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    const myDiv = document.getElementById("myDiv");
+    // Correct approach: Check if the property exists before accessing it
+    if (myDiv && myDiv.textContent) {
+      console.log(myDiv.textContent);
+    } else {
+      console.error("Element or property does not exist");
+    }
+  </script>
+</body>
+</html>
